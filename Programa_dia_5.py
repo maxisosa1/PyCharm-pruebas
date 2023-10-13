@@ -42,6 +42,8 @@ def ingreso():
 
 
 def esta_letra(letra, palabra, vidas, coincidencias ):
+    # Esta función verifica que la letra elegida cunpla alguna de las tres condiciones: 1- Correcta y no elegida
+    # anteriormente 2-Correcta pero ya elegida anteriormente 3- O bien incorrecta
     fin = False
 
     if letra in palabra and letra not in letras_correctas:
@@ -61,12 +63,14 @@ def esta_letra(letra, palabra, vidas, coincidencias ):
     return vidas, fin, coincidencias
 
 def perder():
+    #Esta función muestra que el jugador perdió
     print("Te has quedado sin vidas")
     print("La palabra oculta era ", palabra)
 
     return True
 
 def ganar(palabra_descubierta):
+    #Esta función muestra que el jugador ganó
     palabra_guiones(palabra_descubierta)
     print("Felicitaciones, has ganado el juego")
 
