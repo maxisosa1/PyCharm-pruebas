@@ -78,7 +78,7 @@ def ganar(palabra_descubierta):
 
 
 
-
+#Proceso del juego
 palabra, letras_unicas = palabra_azar(lista_palabras)
 
 while not juego_terminado:
